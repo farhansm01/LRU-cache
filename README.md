@@ -29,8 +29,13 @@ O(capacity), since the cache never stores more than `capacity` key/value pairs a
 
 Clone or download this file, then run it with Node:
 
-```bash
-node cache.js
-```
+    node cache.js
 
 You should see output like:
+
+    get A: 10
+    get B: -1
+    get C: 30
+    get A: 10
+
+This matches the example scenario in the assignment: after the cache (capacity 2) evicts key B to make room for key C, `get("B")` correctly returns -1.
